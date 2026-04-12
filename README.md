@@ -3,9 +3,15 @@
 ## Description 
 The Bloom Traversal System Project is a prototype of an enhanced traversal system that has add on inventory funcitonality and early implementation of PCG logic for realtime spawning. 
 
-## Required Assets and plugins
-* Third Person Starter Assets
-* PCG Plugins 
+### Required Plugins (enable in Edit → Plugins):
+ 
+| Plugin | Version | Notes |
+|---|---|---|
+| Procedural Content Generation Framework (PCG) | 1.0 | Core PCG system |
+| PCG External Data Interop | 0.2 | Beta — external data formats |
+| PCG FastGeo Interop | 0.1 | Experimental — runtime primitive spawning |
+| PCG Geometry Script Interop | 0.2 | Beta — geometry script integration |
+ 
 
 ## Installation and build instructions
 
