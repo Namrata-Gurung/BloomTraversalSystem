@@ -5,12 +5,11 @@ The Bloom Traversal System Project is a prototype of an enhanced traversal syste
 
 ### Required Plugins (enable in Edit → Plugins):
  
-| Plugin |
-|---|---|---|
-| Procedural Content Generation Framework (PCG) |
-| PCG External Data Interop |
-| PCG FastGeo Interop |
-| PCG Geometry Script Interop| 
+Plugins: 
+* Procedural Content Generation Framework (PCG)
+* PCG External Data Interop
+* PCG FastGeo Interop
+* PCG Geometry Script Interop
  
 
 ## Installation and build instructions
