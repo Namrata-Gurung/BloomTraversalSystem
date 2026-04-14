@@ -1,11 +1,11 @@
 # BloomTraversalSystem - A prototype of a responsive traversal system with PCG implementation
 
 ## Description 
-The Bloom Traversal System Project is a prototype of an enhanced traversal system that has add on inventory funcitonality and early implementation of PCG logic for realtime spawning. 
+The Bloom Traversal System Project is a prototype of an enhanced traversal system that has add on inventory functionality and early implementation of PCG logic for realtime spawning. 
 
 ### Required Plugins (enable in Edit → Plugins):
  
-| Plugin | Version | Notes |
+| Plugin |
 |---|---|---|
 | Procedural Content Generation Framework (PCG) |
 | PCG External Data Interop |
@@ -25,14 +25,17 @@ The Bloom Traversal System Project is a prototype of an enhanced traversal syste
 1. Clone/download repository found here: 
 https://github.com/Namrata-Gurung/BloomTraversalSystem.git 
 2. Navigate to the project folder and open BloomTraversalSystem.uproject. If rebuild prompt appears, please click yes. 
-3. Enable the required plugins via navigating to Edit tab, Plugins and selecting the PCG pluigns. Restart the editor as prompted. 
-4. All the main project code is within the PCGEnhanced_TMS plugin folder with changes made in the Third Person Content folder only to ABP_Unarmed and BP_ThirdPersonCharacter. 
+3. If not already enabled, enable the required plugins via navigating to Edit tab, Plugins and selecting the PCG plugins specified above. Restart the editor as prompted. 
+4. To view project files and blueprint implementation, navigate to the content browser where the main project code is located within the PCGEnhanced_TMS/ plugin folder with changes made in the Third Person Content folder called content/ only to ABP_Unarmed and BP_ThirdPersonCharacter. 
 
 ### Project Opening 
 
 - The starter map provided in the starter assets should load and the play button can be pressed to view the plugin functionality in action. 
 - The level can then be played through and tested. 
-- The content drawer, whcih contains all of the files can be found at the bottomof the editor and docked in the layout to access all the code files. 
+
+## Game Scene & Gameplay Testing 
+
+In the game scene, the player character spawns in the the centre of the third person map, provided in the Third Person Starter Assets. There is no on screen UI for the main level on startup, however, the inventory can be toggled with the F key and once items have been collected in the game world, the mouse can be used to click on the item for equippal, where spawn response is initiated. 
 
 ## Controls
  
@@ -87,19 +90,12 @@ Plugins/PCGEnhanced_TMS/
 └── UI/                  # Widget blueprints (WBP_InventoryBox, WBP_InventorySlot)
 ```
 
-## Game Scene 
-
-In the game scene, the player character spawns in the the cnetre of the third person map, provided in the Third Person Starter Assets. There is no on screen UI for the main level on startup, however, the invenotry cna be toggled with the F key and once items have been collected in the game world, the mouse can be used ot click on the item for equippal, where spawn response is initiated. 
-
 ## Known Issues / In Progress
  
 - Inventory description panel and item inspection UI not yet implemented
 - Socket positioning for equippable items may require adjustment on each skeleton and item added 
 - The Hoverboard item is a placeholder with no functionality implemented yet.
 
-## Version Information
-
-Unreal Engine version 5.7.3
 
 ## Credits, Attribution and Licences
 
@@ -117,3 +113,7 @@ Unreal Engine version 5.7.3
 * Icons located in Items/Icons/ - Screenshotted by the author from the sketchfab website on the model pages as placeholder icons
 * Third Person Starter Assets - Provided by Unreal Engine on creation of the project
 
+## Version Information
+
+Build Version: Unreal Engine version 5.7.3
+Development and Testing system: Windows 11 (64 bit)
