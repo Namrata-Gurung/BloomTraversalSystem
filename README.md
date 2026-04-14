@@ -7,10 +7,10 @@ The Bloom Traversal System Project is a prototype of an enhanced traversal syste
  
 | Plugin | Version | Notes |
 |---|---|---|
-| Procedural Content Generation Framework (PCG) | 1.0 | Core PCG system |
-| PCG External Data Interop | 0.2 | Beta — external data formats |
-| PCG FastGeo Interop | 0.1 | Experimental — runtime primitive spawning |
-| PCG Geometry Script Interop | 0.2 | Beta — geometry script integration |
+| Procedural Content Generation Framework (PCG) |
+| PCG External Data Interop |
+| PCG FastGeo Interop |
+| PCG Geometry Script Interop| 
  
 
 ## Installation and build instructions
@@ -40,7 +40,7 @@ https://github.com/Namrata-Gurung/BloomTraversalSystem.git
 |---|---|
 | Move | WASD |
 | Jump | Space |
-| Sprint | Shift |
+| Sprint | Shift + W |
 | Crouch | C |
 | Slide | Shift + X |
 | Toggle Inventory | F |
@@ -88,20 +88,20 @@ Plugins/PCGEnhanced_TMS/
 ```
 
 ## Game Scene 
-In the game scene, the player character spawns in the the cnetre of the thrird person map, provided in the Third Person Starter Assets. There is no on screen UI for the main scene, however, the player can toggle inventory and see the invenotry populated with the equipment items in the game world. 
+
+In the game scene, the player character spawns in the the cnetre of the third person map, provided in the Third Person Starter Assets. There is no on screen UI for the main level on startup, however, the invenotry cna be toggled with the F key and once items have been collected in the game world, the mouse can be used ot click on the item for equippal, where spawn response is initiated. 
 
 ## Known Issues / In Progress
  
-- PCG foliage spawning system is partially implemented — graph exists but runtime triggering from boot equipment is still being integrated
 - Inventory description panel and item inspection UI not yet implemented
 - Socket positioning for equippable items may require adjustment on each skeleton and item added 
+- The Hoverboard item is a placeholder with no functionality implemented yet.
 
 ## Version Information
 
 Unreal Engine version 5.7.3
 
 ## Credits, Attribution and Licences
-
 
 ### Logic 
 
