@@ -32,6 +32,7 @@ https://github.com/Namrata-Gurung/BloomTraversalSystem.git
 
 - The starter map provided in the starter assets should load and the play button can be pressed to view the plugin functionality in action. 
 - The level can then be played through and tested. 
+- The content drawer, whcih contains all of the files can be found at the bottomof the editor and docked in the layout to access all the code files. 
 
 ## Controls
  
@@ -98,3 +99,29 @@ In the game scene, the player character spawns in the the cnetre of the thrird p
 
 Unreal Engine version 5.7.3
 
+## Onedrive link 
+https://cityuni-my.sharepoint.com/:f:/r/personal/namrata_gurung_city_ac_uk/Documents/2025IndividualProject/New%20folder/addf055_ProjectPackageSubmission?csf=1&web=1&e=x1GnPC 
+
+##References
+
+Adapted from: JBarlowTraining (2024), YouTube
+Accessed: April 2026, URL:https://youtu.be/Fxwy4H33g44?si=I3X7kSy6QUB34g1Y
+
+Logic informed by: Mind-Brain (2022), Unreal Engine Forums
+Accessed: April 2026, URL: https://forums.unrealengine.com/t/detect-player-z-velocity/715404/3 
+
+
+https://www.youtube.com/watch?v=LM3Tw49G0g8&t=285s
+
+Logic adapted from: 
+Accessed: April 2026, 
+
+Logic reused from: 
+Accessed: April 2026, URL: 
+
+Logic informed by: JephyDa1st (2022), Unreal Engine Forum
+Accessed: April 2026, URL: https://forums.unrealengine.com/t/how-to-check-whether-character-is-on-ground/395981/9 
+
+
+Logic reused from: Mitchell Theriault, GameDev.tv Team, Ben Tristem (2026), Udemy, Unreal Engine Blueprint course video 
+Accessed: April 2026, URL: https://www.udemy.com/share/101Xs63@PH9BtizFdUqgKw3QiGxHVo_GUfDPjhsk_-UQYy__weu66F6Dp2ei0Xb0seDqABvRlA==/ 
