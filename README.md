@@ -34,13 +34,13 @@ https://github.com/Namrata-Gurung/BloomTraversalSystem.git
 
 ## Game Scene & Gameplay Testing 
 
-### Game Start 
+### 1. Game Start 
 In the game scene, the player character spawns in the the centre of test level called LVL_Test, provided in the plugin files. There is no on-screen UI for the main level on startup, however, the inventory can be toggled open and closed. 
 
-### Using the inventory
+### 2. Using the inventory
 As mentioned, the inventory can be toggled with the F key. When open, the player can select a slot, assuming that items have already been collected and the inventory is populated with those items. The player can hover over the slot to view the details of the item. Once clicked, the inventory should refresh and the item is visbily equipped on the player's body. If the player wishes to remove the last equipped item, the Remove button can be clicked.
 
-### Traversal Repsonse
+### 3. Traversal Repsonse
 Once the item has been equipped, the traversal repsonse should activate. The change in spawning behaviour is seen when transitioning from the walk state to the run state. 
 
 
