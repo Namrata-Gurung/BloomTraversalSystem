@@ -25,16 +25,24 @@ Plugins:
 https://github.com/Namrata-Gurung/BloomTraversalSystem.git 
 2. Navigate to the project folder and open BloomTraversalSystem.uproject. If rebuild prompt appears, please click yes. 
 3. If not already enabled, enable the required plugins via navigating to Edit tab, Plugins and selecting the PCG plugins specified above. Restart the editor as prompted. 
-4. To view project files and blueprint implementation, navigate to the content browser where the main project code is located within the PCGEnhanced_TMS/ plugin folder with changes made in the Third Person Content folder called content/ only to ABP_Unarmed and BP_ThirdPersonCharacter. 
+4. To view project files and blueprint implementation, navigate to the content browser where the main project code is located within the PCGEnhanced_TMS/ plugin folder with changes made in the Third Person Content folder called content/ only to ABP_Unarmed, BP_ThirdPersonCharacter and SK_Mannequin.
 
 ### Project Opening 
 
-- The starter map provided in the starter assets should load and the play button can be pressed to view the plugin functionality in action. 
+- The test map provided should load and the play button can be pressed to view the plugin functionality in action. 
 - The level can then be played through and tested. 
 
 ## Game Scene & Gameplay Testing 
 
-In the game scene, the player character spawns in the the centre of the third person map, provided in the Third Person Starter Assets. There is no on screen UI for the main level on startup, however, the inventory can be toggled with the F key and once items have been collected in the game world, the mouse can be used to click on the item for equippal, where spawn response is initiated. 
+### Game Start 
+In the game scene, the player character spawns in the the centre of test level called LVL_Test, provided in the plugin files. There is no on-screen UI for the main level on startup, however, the inventory can be toggled open and closed. 
+
+### Using the inventory
+As mentioned, the inventory can be toggled with the F key. When open, the player can select a slot, assuming that items have already been collected and the inventory is populated with those items. The player can hover over the slot to view the details of the item. Once clicked, the inventory should refresh and the item is visbily equipped on the player's body. If the player wishes to remove the last equipped item, the Remove button can be clicked.
+
+### Traversal Repsonse
+Once the item has been equipped, the traversal repsonse should activate. The change in spawning behaviour is seen when transitioning from the walk state to the run state. 
+
 
 ## Controls
  
@@ -53,10 +61,10 @@ In the game scene, the player character spawns in the the centre of the third pe
 
 ```
 Content/
-├── Characters/          # Character assets
+├── Characters/          # Character files (e.g. SK_Mannequin and ABP_Unarmed)
 ├── Input/               # Input action mappings
 ├── LevelPrototyping/    # Main level
-├── ThirdPerson/         # Base third person assets
+├── ThirdPerson/         # Base third person assets e.g. BP_ThirdPersonCharacter
  
 Plugins/PCGEnhanced_TMS/
 ├── Animations/
@@ -67,15 +75,15 @@ Plugins/PCGEnhanced_TMS/
 │   └── BS_Crouch                 # Crouch blend space
 ├── Components/          # AC_InventoryComponent, AC_TraversalComponent
 ├── Input/               # IA_Crouch, IA_Slide, IA_Sprint, IA_ToggleInventory, IMC_Extended
-├── Interfaces/          # Blueprint interfaces
+├── Interfaces/          # BPI_CharacterData
 ├── Items/
 │   ├── Blueprints/
 │   │   ├── Equipment/   # Equippable item blueprints (e.g. BP_BootItem_Left)
 │   │   └── ItemResponses/ # Item response blueprints (e.g. BP_ItemResponse_BootLeft)
-│   ├── DataAssets/      # Item data assets (e.g. DA_BootLeft)
+│   ├── DataAssets/      # DA_Item (parent) and Item data assets (e.g. DA_BootLeft)
 │   └── Equipment/
-│       ├── Materials/
-│       ├── Meshes/
+│       ├── Materials/   
+│       ├── Meshes/     
 │       └── Textures/
 │           ├── Boot/
 │           └── Hoverboard/
@@ -85,36 +93,39 @@ Plugins/PCGEnhanced_TMS/
 │      ├── StaticMeshes/
 │      └── Textures/
 ├── Icons/               # Item icons for UI
-├── PCG/                 # PCG graph assets and BP_FootstepActor
-└── UI/                  # Widget blueprints (WBP_InventoryBox, WBP_InventorySlot)
+├── PCG/                 # PCG graphs and BP_FootstepActor
+├── UI/                  # Widget blueprints (e.g. WBP_InventoryBox, WBP_InventorySlot)
+├── Lvl_Test             # Plugin test level 
+
+Engine/                  # C++ engine files
 ```
+
 
 ## Known Issues / In Progress
  
-- Inventory description panel and item inspection UI not yet implemented
+- Inventory "Drop" button not yet implemented
 - Socket positioning for equippable items may require adjustment on each skeleton and item added 
 - The Hoverboard item is a placeholder with no functionality implemented yet.
+- Traversal and corresponding spawning response not applied to Slide or Crouch.
 
 
 ## Credits, Attribution and Licences
 
 ### Logic 
 
-* Reused logic has been declared where relevant, within the porject files and these appear as comments surrounding or encompassing specific pieces of logic. 
+* Reused logic has been declared where relevant, within the project files and these appear as comments surrounding or encompassing specific pieces of functions/classes. 
 
 ### Assets 
 
-* Animations - Sourced from: Miaxamo, accessed: March 2026, URL: https://www.mixamo.com/#/
+* Animations sourced from: Miaxamo, accessed: March 2026, URL: https://www.mixamo.com/#/
 * Animations converted using: Mixamo Converter - Terribilis Studio, accessed: April 2026, URL: https://terribilisstudio.fr/?section=MC 
 * Boot Model for main equipment item- This work is based on "White Boot" (https://sketchfab.com/3d-models/white-boot-8bb0920b41334c84ae7e99144b7a104b) by DarioMQD (https://sketchfab.com/dariomqd98) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * Hoverboard Model for placeholder equipment item - This work is based on "Hoverboard" (https://sketchfab.com/3d-models/hoverboard-30cc9b7eeda64229bb9ac689ef7c03c5) by mister dude (https://sketchfab.com/misterdude) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * Stylized Foliage for spawning - This work is based on "Stylized Foliage" (https://sketchfab.com/3d-models/stylized-foliage-c44857af70d84e448d7e6b2c10567c31) by KZNYKN (https://sketchfab.com/KZNYKN) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) 
-* Icons located in Items/Icons/ - Screenshotted by the author from the sketchfab website on the model pages as placeholder icons
+* Icons located in Items/Icons/ - created Sneha Gurung, Accessed: July 2026
 * Third Person Starter Assets - Provided by Unreal Engine on creation of the project
 
 ## Version Information
 
 Build Version: Unreal Engine version 5.7.3
 Development and Testing system: Windows 11 (64 bit)
-
-## OneDrive Link
